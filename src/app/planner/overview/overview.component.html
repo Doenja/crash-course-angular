@@ -1,0 +1,18 @@
+<div class="weekdays">
+  <div
+    [ngClass]="selectedDay === day ? 'selected' : ''"
+    *ngFor="let day of days"
+    class="weekday"
+    (click)="handleClick(day)"
+  >
+    {{ day }}
+  </div>
+  <div
+    [ngClass]="selectedDay === 'extra' ? 'selected' : ''"
+    *ngIf="showExtra"
+    class="weekday wide"
+    (click)="handleClick('extra')"
+  >
+    Extra
+  </div>
+</div>
